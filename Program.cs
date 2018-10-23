@@ -11,7 +11,6 @@ namespace Lab_9
         static void Main(string[] args)
         {
             int usernum = 0;
-            string userinput;
             List<string> names = new List<string>();
             names.Add  ("Mace");
             names.Add  ("Ty");
@@ -99,7 +98,7 @@ namespace Lab_9
             while (exitProg == false) //while loop for the whole program
             {
                 Console.WriteLine("Welcom to our C# class.");
-
+                
                 while (true) // while loop for student name
                 {
                     Console.WriteLine("Which student would you like to learn more about? (Enter a number 0 - 18)");
@@ -111,7 +110,7 @@ namespace Lab_9
                         break;
                     }
 
-                    catch (IndexOutOfRangeException) //incase user goes out of range it catches these two exeptions
+                    catch (ArgumentOutOfRangeException) //incase user goes out of range it catches these two exeptions
                     {
                         Console.WriteLine("That student doesn't exist, try agian");
                         continue;
@@ -184,8 +183,7 @@ namespace Lab_9
 
                     else if (answer != "y" || answer != "n") //if anything other then y or n it continues to ask the user
                     {
-                        Console.WriteLine("Would you like to continue y/n ?");
-                        answer = Console.ReadLine();
+                       
                         continue;
                     }
 
